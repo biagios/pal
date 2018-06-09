@@ -4,7 +4,6 @@
     <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
     <a href="https://discordapp.com/oauth2/authorize?&client_id=300955174225051650&scope=bot&permissions=536980545"><img src="https://img.shields.io/badge/Discord-Add%20Bot-7289DA.svg" /></a>
     <a href="https://discord.gg/k6qSHQs"><img src="https://img.shields.io/badge/Discord-Join%20Server-7289DA.svg" /></a>
-    <a href='https://gemnasium.com/github.com/sleme/pal-bot'><img src="https://gemnasium.com/badges/github.com/sleme/pal-bot.svg" alt="Dependency Status" /></a>
 </p>
 
 
@@ -23,7 +22,7 @@ To see all the **commands** of this bot, check out this [documentation](COMMANDS
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request with your new stuff.
 
-## Changelog: [here](https://github.com/sleme/pal-bot/releases)
+## Changelog: [here](https://github.com/biagios/pal/releases)
 
 ## Known Issues / Planned for the future:
 
