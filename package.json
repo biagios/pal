@@ -1,12 +1,12 @@
 {
-  "name": "Pal-Bot",
+  "name": "Pal",
   "version": "1.0.1",
   "description": "A bot that does stuff.",
   "readme": "README.md",
   "author": "Biagio Santoro",
   "repository": {
     "type": "git",
-    "url": "git@github.com:sleme/pal-bot.git"
+    "url": "git@github.com:biagios/pal.git"
   },
   "scripts": {
     "test": "standard"
