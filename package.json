@@ -1,0 +1,32 @@
+{
+  "name": "Pal-Bot",
+  "version": "1.0.1",
+  "description": "A bot that does stuff.",
+  "readme": "README.md",
+  "author": "Biagio Santoro",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sleme/pal-bot.git"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "license": "MIT",
+  "main": "app.js",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "discord.js": "^11.2.1",
+    "figlet": "^1.2.0",
+    "got": "^8.0.0",
+    "jimp": "^0.2.28",
+    "pngjs": "^3.3.1",
+    "textanary": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

@@ -1,16 +1,14 @@
-
-# Development on Pal has concluded. It has been fun working on it.
-
-<h1 align="center"> Pal, the discord bot.</h1>
+<h1 align="center"> Pal, the discord bot. </h1>
 
 <p align="center">
     <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
     <a href="https://discordapp.com/oauth2/authorize?&client_id=300955174225051650&scope=bot&permissions=536980545"><img src="https://img.shields.io/badge/Discord-Add%20Bot-7289DA.svg" /></a>
-    
+    <a href="https://discord.gg/k6qSHQs"><img src="https://img.shields.io/badge/Discord-Join%20Server-7289DA.svg" /></a>
+    <a href='https://gemnasium.com/github.com/sleme/pal-bot'><img src="https://gemnasium.com/badges/github.com/sleme/pal-bot.svg" alt="Dependency Status" /></a>
 </p>
 
 
-<p align="center">This was Pal, a discord bot based off <a href="https://github.com/hydrabolt/discord.js/">discord.js</a> and <a href="https://gist.github.com/eslachance/3349734a98d30011bb202f47342601d3">this</a> as an example.</p>
+<p align="center">This is Pal, a discord bot based off <a href="https://github.com/hydrabolt/discord.js/">discord.js</a> and <a href="https://gist.github.com/eslachance/3349734a98d30011bb202f47342601d3">this</a> as an example.</p>
 
 
 ## Features:
@@ -25,11 +23,11 @@ To see all the **commands** of this bot, check out this [documentation](COMMANDS
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request with your new stuff.
 
-## Changelog: [here](https://github.com/biagios/pal-bot/releases)
+## Changelog: [here](https://github.com/sleme/pal-bot/releases)
 
-## Things to do for future developers:
+## Known Issues / Planned for the future:
 
-Here is a list of things you might want to do if you somehow find this repo and want to bring Pal back to it's feet.
+Here is a list of known issues and planned features where you could help us too!
 
 _Italic list items have a high priority._
 
@@ -39,4 +37,8 @@ _Italic list items have a high priority._
 - [ ] **Planned:** Adding more and enhance discord server related commands.
 - [ ] **_Planned:_** Categorize commands (especially in [COMMANDS.md](COMMANDS.md) and in the help command) in categories.
 
-Contact me if you want more info.
+Write an Issue to make a suggestion or to inform us about a problem.
+
+
+
+
