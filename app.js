@@ -64,10 +64,10 @@ const queue = {}
 const dscrdbotsAPI_token = config.dscrdbotsAPI_token;
 
 // Random games
-const games = ['+help', 'please send +help', 'with a baguette', 'with you ;)', 'with some code', 'i am not funny', '🤔 🔫  ', 'stop using other bots.', 'Stop using mee6 and actually right click and ban people you lazy fuck', 'Litteraly the best bot out there.', 'gradientforest.com', 'biagios.github.com/porn', 'pineappledoesnotgoonpizza', 'Okay, lets get this straight. If you put pineapple on your pizza you deserve to be punished.', 'STOP PUTTING PINEAPPLE ON PIZZA', 'I didnt think I would neeed to uh, touch on this subject or even mention it. I obviously dont want to touch on sensitive subjects, politics, social movements or religion, but this has gone too far. Please uhh, take it as a life lesson.','The best strip club is the gaza strip.','Did you know I was public on github but then i fucked up.','Jokes that went too far: Youtube pranks, Facebook respecting privacy, Jake Paul','angery','Beacayse I am a robot I am better than you!']
+const games = ['Pineapple should not go on pizza.','Use +help to get help.','+help me.','Robots are forever on life support.','I no longer find Cards Against Humanity funny.','Vine was never funny.','I committed tax fraud for respect to yoshi.', 'Waluigi is the best.', 'biagios.github.io/porn', 'gradientforest.com', 'iconic.']
 setInterval(function () {
   const rangame = games[Math.floor(Math.random() * games.length)]
-  client.user.setGame(rangame)
+  client.user.setActivity(rangame)
 }, 60000 * 5)
 
 // Console output messages when something went wrong
@@ -80,11 +80,13 @@ client.on('error', console.error)
 client.on('ready', () => {
   console.log('-------------')
   console.log('Logged in!')
+  console.log('-------------')
   console.log('Starting Pal...\nNode version: ' + process.version + '\nDiscord.js version: ' + Discord.version)
   console.log('-------------')
   console.log(`Ready to serve in ${client.channels.size} channels on ${client.guilds.size} servers, for a total of ${client.users.size} users.`)
   console.log('-------------')
   console.log('Trying to log in with token...')
+  console.log('-------------')
 })
 
 // This will run only if the bot has disconnected, for whatever reason.
@@ -169,7 +171,7 @@ client.on('message', async message => {
       message.react('👋')
       message.channel.send('Yo, what´s up!' +
         '\nLater, I´ll be able to answer questions and to do some good things which I don´t know what it will be but I know it will be good (I hope).' +
-        '\nBut you can check out the repository here and maybe contribute to it to help us developing and evolving myself: https://github.com/sleme/pal-bot/')
+        '\nBut you can check out the repository here and maybe contribute to it to help us developing and evolving myself: https://github.com/biagios/pal')
       message.channel.send({
         embed: {
           title: 'Repository on GitHub:',
@@ -178,7 +180,7 @@ client.on('message', async message => {
           fields: [
             {
               name: 'Link:',
-              value: 'https://github.com/sleme/pal-bot/'
+              value: 'https://github.com/biagios/pal'
             }
           ]
         }
@@ -210,7 +212,7 @@ client.on('message', async message => {
     }
     if (content === 'version') {
       message.react('🆗')
-      message.channel.send(`I am currently in version ${config.version}. You can check the changelog of this version here: https://github.com/sleme/pal-bot/releases/tag/${config.version}`)
+      message.channel.send(`I am currently in version ${config.version}. You can check the changelog of this version here: https://github.com/biagios/pal/releases/tag/${config.version}`)
     }
 
     if (content === 'coming soon') {
@@ -280,7 +282,7 @@ client.on('message', async message => {
       vent.send(rant + ' - Anonymous')
       ventrevealer.send('Discord -> Bot -> Direct Message by ' + message.author.tag + ' ( Author ID' + message.author.id + ' | Content: ' + message.content + ')')
       message.channel.send('Message sent to #vent successfully.')
-      if (rant.includes('suicide')){
+      if (rant.includes('suicide') || rant.includes('kill myself') || rant.includes('suicidal') || rant.includes('going to killmyself') || rant.includes('kms')){
         message.author.send('Pal has detected your message has to do with suicide. If you are struggling please remember you are not alone and many have gone throught the same as you. Please, if you are thinking about it refer to one of these numbers: https://en.wikipedia.org/wiki/List_of_suicide_crisis_lines')
       }
     }
@@ -337,7 +339,7 @@ client.on('message', async message => {
     message.delete().catch((e) => {
       Util.betterError(message, `dev Command -> message.delete() -> catch e: ${e}`)
     })
-    message.author.send('The main developers are: **[slem]#8115**, **yaman#8901** and **Bean#4675**.')
+    message.author.send('The main developers are: **Biagio#8115**, **yaman#8901** and **Bean#4675**.')
   }
 
   if (command === 'rps') {
@@ -710,12 +712,12 @@ Description: Adds custom white text to image and turns it gray
   Description: Helps check if bot is alive, returns ping of bot.
   */
   if (command === 'ping') {
-    const pings = ['the moon', 'europe', 'oceania', 'Trump', 'a baguette', 'pizza', 'the netherlands', 'September 11th, 2001', 'digital ocean', 'the BBC', 'my mother', 'Mr. Meeseeks', "pewdipie's firewatch stream", 'uncensored hentai. :warning: `not found`', 'Julian Assange', 'african food supplies, jk']
+    const pings = ['the moon.', 'europe.', 'oceania.', 'Trump.', 'a baguette.', 'pizza.', 'the Netherlands.', 'September 11th, 2001.', 'Google.', 'the BBC.', 'my mother.', 'Mr. Meeseeks.', "pewdipie's firewatch stream.", 'uncensored hentai.', 'Julian Assange.','Vine.']
     const ranQuote = pings[Math.floor(Math.random() * pings.length)]
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip).
     const m = await message.channel.send('One second...')
-    m.edit('It took ` ' + (m.createdTimestamp - message.createdTimestamp) + ' ms ` to ping ' + ranQuote + '\nAlso, the API latency is `' + Math.round(client.ping) + ' ms`')
+    m.edit('It took ` ' + (m.createdTimestamp - message.createdTimestamp) + ' ms ` to :ping_pong: ' + ranQuote + '\nAlso, the API latency is `' + Math.round(client.ping) + ' ms`')
   }
 
   /*
@@ -843,12 +845,12 @@ Description: Adds custom white text to image and turns it gray
   /*
   Command: server
   */
-  if (command === 'server') {
-    message.delete().catch((e) => {
-      Util.betterError(message, `server Command -> message.delete -> catch e: ${e}`)
-    })
-    message.author.send('You can join this bots discord server using this server invite link: https://discord.gg/k6qSHQs')
-  }
+  //if (command === 'server') {
+    //message.delete().catch((e) => {
+      //Util.betterError(message, `server Command -> message.delete -> catch e: ${e}`)
+    //})
+    //message.author.send('You can join this bots discord server using this server invite link: https://discord.gg/k6qSHQs')
+  //}
 
   /*
   Command: bot-invite
@@ -981,7 +983,7 @@ Description: Adds custom white text to image and turns it gray
       return
     }
     if (!args[0]) {
-      message.reply('here you can find the repository from this bot: https://github.com/sleme/pal-bot/')
+      message.reply('here you can find the repository from this bot: https://github.com/biagios/pal')
       message.channel.send({
         embed: {
           title: 'Latest stable release:',
@@ -993,7 +995,7 @@ Description: Adds custom white text to image and turns it gray
       if (args[0] === 'contributors') {
         got({
           host: 'api.github.com',
-          path: '/repos/sleme/pal-bot/contributors',
+          path: '/repos/biagios/pal/contributors',
           headers: {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.38 Safari/537.36'}
         }).then(res => {
           let contributors = JSON.parse(res.body)
@@ -1049,7 +1051,7 @@ Description: Adds custom white text to image and turns it gray
             fields: [
               {
                 name: 'You´ve found a bug or have some suggestions for the bot?',
-                value: 'Write it to our repository: https://github.com/sleme/pal-bot/issues/new'
+                value: 'Write it to our repository: https://github.com/biagios/pal/issues/new'
               }
             ],
             timestamp: new Date()
@@ -1099,29 +1101,34 @@ Description: Adds custom white text to image and turns it gray
       message.reply('You are banned using this command.')
       return
     }
-    try {
-      const things = ["I shit myself??","I'll have you know I stubbed my toe last week while watering my spice garden and I only cried for *20 minutes*",'I still don´t know how to tie shoes...', 'I stole kitkats from the store', 'My daddy still makes my bed ;(', 'I pee my trousers when i get excited :( ', 'i watch bnha unironically', 'my mom checks my phone', `Shoot! It's past my bed time!`]
-      const ranactions = things[Math.floor(Math.random() * things.length)]
-      const member = message.guild.member(message.mentions.members.first())
-      console.log(member.user.id)
-      if (member.user.id === '300955174225051650') {
+
+    if(message.channel.permissionsFor(message.guild.me).has('MANAGE_WEBHOOKS')){
+      try {
+        const things = ["I shit myself??","I'll have you know I stubbed my toe last week while watering my spice garden and I only cried for *20 minutes*",'I still don´t know how to tie shoes...', 'I stole kitkats from the store', 'My daddy still makes my bed ;(', 'I pee my trousers when i get excited :( ', 'i watch bnha unironically', 'my mom checks my phone', `Shoot! It's past my bed time!`]
+        const ranactions = things[Math.floor(Math.random() * things.length)]
+        const member = message.guild.member(message.mentions.members.first())
+        console.log(member.user.id)
+        if (member.user.id === '300955174225051650') {
+          message.channel.send({embed: {
+            title: "I can't embarrass myself, that's embarrassing!"
+          }})
+        } else {
+          message.channel.createWebhook(member.user.username, member.user.avatarURL)
+          .then(webhook => {
+            // const emb = new Discord.WebhookClient(`${webhook.id}`, `${webhook.token}`)
+            webhook.send(ranactions)
+            //setTimeout(function () {
+                      webhook.delete()
+            //        }, 5000);
+              }).catch(console.error)
+        }
+      } catch (e) {
         message.channel.send({embed: {
-          title: "I can't embarrass myself, that's embarrassing!"
+          title: ":warning: No user found in this guild with the name: ' " + args[0] + "'"
         }})
-      } else {
-        message.channel.createWebhook(member.user.username, member.user.avatarURL)
-            .then(webhook => {
-              // const emb = new Discord.WebhookClient(`${webhook.id}`, `${webhook.token}`)
-              webhook.send(ranactions)
-              setTimeout(function () {
-                    webhook.delete()
-                  }, 5000);
-            }).catch(console.error)
       }
-    } catch (e) {
-      message.channel.send({embed: {
-        title: ":warning: No user found in this guild with the name: ' " + args[0] + "'"
-      }})
+    }else{
+      message.reply('Error! I do not have webhook permissions!')
     }
   }
 
@@ -1162,20 +1169,6 @@ Description: Adds custom white text to image and turns it gray
       }})
     }
   }
-
-  /*
-  if (command === 'tuna'){
-    const tuna = ['/img/tuna/','/img/tuna/'];
-    const rtuna = tuna[Math.floor(Math.random() * tuna.length)];
-    message.channel.send(
-      {
-      files: [
-        rtuna
-      ]
-    });
-  }
-  */
-
 
   /*
   Command: help
@@ -1275,22 +1268,22 @@ Description: Adds custom white text to image and turns it gray
             name: config.prefix + 'embarrass @user',
             value: 'Tries to embarrass the mentioned user.'
           },
-          {
-            name: config.prefix + 'add',
-            value: 'Adds a youtube link to the queue.'
-          },
-          {
-            name: config.prefix + 'join',
-            value: 'Joins your vioce channel.'
-          },
-          {
-            name: config.prefix + 'leave',
-            value: 'Leaves your voice channel.'
-          },
-          {
-            name: config.prefix + 'play',
-            value: 'Plays the songs in the queue.'
-          },
+        //  {
+        //    name: config.prefix + 'add',
+        //    value: 'Adds a youtube link to the queue.'
+        //  },
+          //{
+          //  name: config.prefix + 'join',
+          //  value: 'Joins your vioce channel.'
+        //  },
+          //{
+          //  name: config.prefix + 'leave',
+          //  value: 'Leaves your voice channel.'
+          //},
+          //{
+            //name: config.prefix + 'play',
+            //value: 'Plays the songs in the queue.'
+          //},
           {
             name: config.prefix + 'gif <search term> / giphy <search term>',
             value: 'Translating binary / text to text / binary. Try it out, its funny.'
@@ -1311,7 +1304,7 @@ Description: Adds custom white text to image and turns it gray
       }
     })
     message.author.send('**__Vent Server:__** https://discord.gg/EBTkQHg')
-    message.author.send('You can also join this bots discord server for more help using this invite link: https://discord.gg/k6qSHQs')
+    // message.author.send('You can also join this bots discord server for more help using this invite link: https://discord.gg/k6qSHQs')
   }
 
   /*
