@@ -1,5 +1,5 @@
 
-# Development on Pal has concluded. It has been fun working on it.
+<h1 align="center"> Development on Pal has moved. It can now be found <a href="https://github.com/MiddayClouds/pal">here</a>. </h1>
 
 <h1 align="center"> Pal, the discord bot.</h1>
 
